@@ -5,7 +5,7 @@ import PageContent from "../components/PageContent";
 
 function ErrorPage() {
   const error = useRouteError();
-
+  const error_print = JSON.stringify(error.data);
   let title = "An error occurred!";
   let message = "Something went wrong!";
 
@@ -23,6 +23,7 @@ function ErrorPage() {
       <MainNavigation />
       <PageContent title={title}>
         <p>{message}</p>
+        <p>{error_print}</p>
       </PageContent>
     </>
   );
